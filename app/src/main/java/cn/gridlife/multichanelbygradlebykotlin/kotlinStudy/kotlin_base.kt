@@ -29,6 +29,12 @@ fun main(args:Array<String>) {
     //类型检测 及 自动类型转换
     ChapterFive().getStringLength("nihao")
     ChapterSix().printRangeData();
+    println()
+    ChapterSix().printRangeData1();
+    println()
+    ChapterSix().printRangeData2();
+    println()
+    ChapterSix().printRangeData3();
 }
 class ChapterOne{
     /**
@@ -168,8 +174,29 @@ class ChapterFive{
  */
 class ChapterSix{
    fun printRangeData(){
-       for(i in 1..5)
+       for(i in 1..5)// 等同于 i>=1&&i<==5
            print(i)
    }
+    fun printRangeData1(){// 什么都不输出
+        println("printRangeData1")
+        for(i in 4..1){
+            print(i)
+        }
+    }
+    //使用 step指定 步长
+
+    fun  printRangeData2(){
+        for(i in 1..20 step 2)
+            print(i)
+    }
+    // 使用 until 函数 排除结束元素
+
+    fun printRangeData3(){
+        for(i in 1 until 20 ){
+            print(i)
+        }
+    }
+
+
 }
 
